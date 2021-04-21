@@ -11,7 +11,7 @@ const Header = () => {
         <>
             <header className={styles.sidebar}>
                 <div className={styles.upperSidebar}>
-                    <div className={styles.logo}>Logo</div>
+                    <div className={styles.logo}>App Name</div>
                     <div className={styles.usernameSidebar}>
                         <p className={styles.username}>이승환</p>
                         <p className={styles.hello}>님, 안녕하세요</p>

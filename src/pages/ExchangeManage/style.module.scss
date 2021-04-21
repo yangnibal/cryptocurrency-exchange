@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 300px);
+    overflow-y: scroll;
+}
+
+.searchInputWrapper{
+    padding-left: 70px;
+    padding-top: 50px;
+    width: 400px;
+}
+.searchInput{
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    padding: 15px 20px;
+    padding-top: 16px;
+    width: 400px;
+    border: none;
+    outline: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.cardListWrapper{
+    margin-top: 70px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.addCardWrapper{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    width: 28%;
+    max-width: 450px;
+    min-width: 380px;
+    height: 200px;
+    margin: 0 20px;
+    margin-bottom: 45px;
+    padding: 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addCard{
+    font-size: 24px;
+    color: #BABABA;
+    font-weight: bold;
+}
