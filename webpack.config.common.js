@@ -1,14 +1,24 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: "./src/index.tsx",
-    output: { path: path.join(__dirname, "build"), filename: "index.bundle.js" },
+    output: {
+        path: path.join(__dirname, '../dist'),
+        filename: 'bundle.js',
+        publicPath: '/',
+    },
     mode: process.env.NODE_ENV || "development",
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
     },
-    devServer: { contentBase: path.join(__dirname, "src") },
+    devServer: { 
+        contentBase: path.join(__dirname, "public"), 
+        compress: true, 
+        hot: true, 
+        port: 3000 
+    },
     module: {
         rules: [
             {
@@ -29,11 +39,18 @@ module.exports = {
                 test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
                 use: ["file-loader"],
             },
+            {
+                test: /\.(woff|woff2|ttf|eot)$/,
+                use: 'file-loader?name=fonts/[name].[ext]!static'
+            }
         ],
     },
     plugins: [
+        new CleanWebpackPlugin({
+            cleanStaleWebpackAssets: false,
+        }),
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, "public", "index.html"),
+            template: "./public/index.html",
         }),
     ],
-};
+}
