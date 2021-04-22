@@ -1,0 +1,35 @@
+.optionContainer{
+    cursor: pointer;
+    padding: 12px 12px;
+    border-bottom: .5px solid #D9D9D9;
+}
+.optionContainer:hover .optionLabel{
+    color: #6DA4E5;
+}
+.optionLabel{
+    color: #707070;
+}
+.submenuWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.exchangeWrapper{
+    background-color: #c4c4c4;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 10px;
+}
+.cryptoName{
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.exchangeRate{
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+}

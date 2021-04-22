@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    margin-top: 50px;
+}
+.selectWrapper{
+    margin: 0 50px;
+    width: 270px;
+    height: 100%;
+}
+.chartWrapper{
+    background-color: #FFFFFF;
+    width: calc(100vw - 700px);
+    height: 50%;
+}
