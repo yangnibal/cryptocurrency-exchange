@@ -10,6 +10,7 @@ const Router = () => {
             <Route exact path={PATHS.PAYMENT} component={Routes.Payment}/>
             <Route exact path={PATHS.LOGIN} component={Routes.Login}/>
             <Route exact path={PATHS.REGISTER} component={Routes.Register}/>
+            <Route exact path={PATHS.SETTINGS} component={Routes.Settings}/>
             <Route component={Routes.NotFound}/>
         </>
     )

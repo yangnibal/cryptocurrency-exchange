@@ -4,6 +4,7 @@ import Payment from './Payment'
 import Login from './Login'
 import Register from './Register'
 import NotFound from './NotFound'
+import Settings from './Settings'
 
 export default {
     ExchangeMain,
@@ -11,5 +12,6 @@ export default {
     Payment,
     Login,
     Register,
-    NotFound
+    NotFound,
+    Settings
 }

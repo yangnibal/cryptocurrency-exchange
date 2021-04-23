@@ -17,6 +17,7 @@ const Header = () => {
     const onClickLogout = () => {
         UserLogout()
         .then(res => {
+            localStorage.removeItem("token")
             history.push(PATHS.LOGIN)
         })
         .catch(rer => {
@@ -38,7 +39,7 @@ const Header = () => {
                     <Link className={location.pathname===PATHS.PAYMENT ? styles.selected + " " + styles.link : styles.link} to={PATHS.PAYMENT}>결제 플랜</Link>
                 </div>
                 <div className={styles.lowerSidebar}>
-                    <Link className={styles.link} to="/">설정</Link>
+                    <Link className={styles.link} to={PATHS.SETTINGS}>설정</Link>
                     <div onClick={onClickLogout} className={styles.logout}>로그아웃</div>
                 </div>
             </header>
