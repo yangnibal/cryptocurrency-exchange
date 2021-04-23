@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import AddCardModal from '../../components/AddCardModal'
 import ExchangeManageCard from '../../components/ExchangeManageCard'
 import Layout from '../../components/Layout'
+import withCheckLogin from '../../hoc/withCheckLogin'
 import styles from './style.module.scss'
 
 const cardList = [
@@ -70,8 +72,20 @@ const cardList = [
 ]
 
 const ExchangeManage: React.FC = () => {
+
+    const [ addCardModalOn, setAddCardModalOn ] = useState<boolean>(false)
+
+    const onClickAddCard = () => {
+        setAddCardModalOn(true)
+    }
+    
+    const onClickAddCardModalDisable = () => {
+        setAddCardModalOn(false)
+    }
+
     return(
         <Layout>
+            {addCardModalOn && <AddCardModal onClickAddCardModalDisable={onClickAddCardModalDisable}/>}
             <div className={styles.container}>
                 <div className={styles.searchInputWrapper}>
                     <input 
@@ -86,7 +100,7 @@ const ExchangeManage: React.FC = () => {
                             key={i}
                         />
                     ))}
-                    <div className={styles.addCardWrapper}>
+                    <div className={styles.addCardWrapper} onClick={onClickAddCard}>
                         <p className={styles.addCard}>카드 추가</p>
                     </div>
                 </div>
@@ -95,4 +109,4 @@ const ExchangeManage: React.FC = () => {
     )
 }
 
-export default ExchangeManage
+export default withCheckLogin(ExchangeManage)

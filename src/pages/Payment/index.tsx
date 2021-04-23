@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import withCheckLogin from '../../hoc/withCheckLogin'
 
 const Payment: React.FC = () => {
     return(
@@ -7,4 +8,4 @@ const Payment: React.FC = () => {
     )
 }
 
-export default Payment
+export default withCheckLogin(Payment)

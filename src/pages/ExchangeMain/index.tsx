@@ -3,6 +3,7 @@ import Layout from '../../components/Layout'
 import styles from './style.module.scss'
 import Select from 'react-select'
 import SelectOption from '../../components/SelectOption'
+import withCheckLogin from '../../hoc/withCheckLogin'
 
 const options = [
     {
@@ -42,4 +43,4 @@ const ExchangeMain: React.FC = () => {
     )
 }
 
-export default ExchangeMain
+export default withCheckLogin(ExchangeMain)

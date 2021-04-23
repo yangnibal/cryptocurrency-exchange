@@ -1,5 +1,7 @@
 export enum PATHS {
     EXCHANGE = '/exchange',
     MANAGE = '/manage',
-    PAYMENT = '/payment'
+    PAYMENT = '/payment',
+    LOGIN = '/login',
+    REGISTER = '/register'
 }
