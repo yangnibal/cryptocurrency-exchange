@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { PATHS } from '../constants/paths'
 import { useRecoilState } from 'recoil'
 import { userInfoAtom } from '../store/users'
-import { UserMe } from '../api/users'
+import { userMe } from '../api/users'
 
 const withCheckLogin = <P extends object>(WrappedComponent: React.ComponentType<P>) => {
     const Component = (props: JSX.IntrinsicAttributes & P & { children?: React.ReactNode }) => {
@@ -18,13 +18,15 @@ const withCheckLogin = <P extends object>(WrappedComponent: React.ComponentType<
                 history.push(PATHS.LOGIN)
             }
             if(!userInfo.username){
-                UserMe()
+                userMe()
                 .then(res => {
                     setUserInfo({
                         username: res.data["name"]
                     })
                 })
                 .catch(err => {
+                    alert("다시 로그인 해 주세요.")
+                    history.push(PATHS.LOGIN)
                     console.log("err: username does not exist")
                 })
             }

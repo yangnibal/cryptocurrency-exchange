@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
-import { UserLogout } from '../../api/users'
+import { userLogout } from '../../api/users'
 import { PATHS } from '../../constants/paths'
 import styles from './style.module.scss'
 import { useRecoilValue } from 'recoil'
@@ -15,7 +15,7 @@ const Header = () => {
     const userInfo = useRecoilValue(userInfoAtom)
 
     const onClickLogout = () => {
-        UserLogout()
+        userLogout()
         .then(res => {
             localStorage.removeItem("token")
             history.push(PATHS.LOGIN)

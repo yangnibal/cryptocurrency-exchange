@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { UserLogin, UserMe } from '../../api/users'
+import { userLogin, userMe } from '../../api/users'
 import { PATHS } from '../../constants/paths'
 import useInputs from '../../hook/useInputs'
 import styles from './style.module.scss'
@@ -19,14 +19,16 @@ const Login: React.FC = () => {
     const setUserInfo = useSetRecoilState(userInfoAtom)
 
     const onClickLogin = () => {
-        UserLogin({
-            email: email,
-            password: password
+        userLogin({
+            data: {
+                email: email,
+                password: password
+            }
         })
         .then(res => {
             if(res.data["token"]){
                 localStorage.setItem("token", res.data["token"])
-                UserMe()
+                userMe()
                 .then(res => {
                     setUserInfo({
                         username: res.data["name"]
