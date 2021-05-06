@@ -5,6 +5,18 @@ import { PATHS } from '../../constants/paths'
 import styles from './style.module.scss'
 import { useRecoilValue } from 'recoil'
 import { userInfoAtom } from '../../store/users'
+import { isDarkModeAtom } from '../../store/common'
+import colors from '../../constants/style/colors.module.scss'
+import { darkModeSecondaryColor, darkModeTextColor, lightModeSecondaryColor, lightModeTextColor } from '../../constants/style/colors'
+import DefaultProfileImg from '../../assets/user-default.png'
+import DashboardLight from '../../assets/dashboard-light.png'
+import DashboardDark from '../../assets/dashboard-dark.png'
+import CardLight from '../../assets/card-light.png'
+import CardDark from '../../assets/card-dark.png'
+import PaymentLight from '../../assets/payment-light.png'
+import PaymentDark from '../../assets/payment-dark.png'
+import GearLight from '../../assets/gear-light.png'
+import GearDark from '../../assets/gear-dark.png'
 
 const Header = () => {
 
@@ -13,6 +25,7 @@ const Header = () => {
     const history = useHistory()
 
     const userInfo = useRecoilValue(userInfoAtom)
+    const isDarkMode = useRecoilValue(isDarkModeAtom)
 
     const onClickLogout = () => {
         userLogout()
@@ -26,25 +39,20 @@ const Header = () => {
     }
 
     return(
-        <>
-            <header className={styles.sidebar}>
-                <div className={styles.upperSidebar}>
-                    <div className={styles.logo}>App Name</div>
-                    <div className={styles.usernameSidebar}>
-                        <p className={styles.username}>{userInfo.username}</p>
-                        <p className={styles.hello}>님, 안녕하세요</p>
-                    </div>
-                    <Link className={location.pathname===PATHS.EXCHANGE ? styles.selected + " " + styles.link : styles.link} to={PATHS.EXCHANGE}>거래소 목록</Link>
-                    <Link className={location.pathname===PATHS.EXCHANGE+PATHS.MANAGE ? styles.selected + " " + styles.link : styles.link} to={PATHS.EXCHANGE + PATHS.MANAGE}>거래소 관리</Link>
-                    <Link className={location.pathname===PATHS.PAYMENT ? styles.selected + " " + styles.link : styles.link} to={PATHS.PAYMENT}>결제 플랜</Link>
+        <header className={styles.header}>
+            <div className={styles.headerLeft}>
+                App
+            </div>
+            <div className={styles.headerRight}>
+                <div className={styles.userImgWrapper}>
+                    <img 
+                        className={styles.userImg} 
+                        src={DefaultProfileImg}
+                        alt="userImg"
+                    />
                 </div>
-                <div className={styles.lowerSidebar}>
-                    <Link className={styles.link} to={PATHS.SETTINGS}>설정</Link>
-                    <div onClick={onClickLogout} className={styles.logout}>로그아웃</div>
-                </div>
-            </header>
-            <div className={styles.divider}/>
-        </>
+            </div>
+        </header>
     )
 }
 

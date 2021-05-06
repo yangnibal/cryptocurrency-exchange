@@ -6,6 +6,7 @@ import useInputs from '../../hook/useInputs'
 import styles from './style.module.scss'
 import { useSetRecoilState } from 'recoil'
 import { userInfoAtom } from '../../store/users'
+import camelcaseKeys from 'camelcase-keys'
 
 const Login: React.FC = () => {
 
@@ -30,9 +31,7 @@ const Login: React.FC = () => {
                 localStorage.setItem("token", res.data["token"])
                 userMe()
                 .then(res => {
-                    setUserInfo({
-                        username: res.data["name"]
-                    })
+                    setUserInfo(camelcaseKeys(res.data))
                     history.push(PATHS.EXCHANGE)
                 })
                 .catch(err => {

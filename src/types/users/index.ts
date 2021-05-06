@@ -6,12 +6,12 @@ interface UserLogin {
 interface User {
     id: number
     email: string
-    is_staff?: boolean
-    is_superuser?: boolean
-    profile_img?: string
+    isStaff?: boolean
+    isSuperuser?: boolean
+    profileImg?: string
     name: string
     username: string
-    socialId: string
+    socialId?: string
 }
 
 interface CreateUser {

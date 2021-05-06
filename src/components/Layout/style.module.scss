@@ -1,7 +1,17 @@
 .layout{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    background-color: #F2F2F2;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    .childrenContainer{
+        width: 100%;
+        height: calc(100% - 50px);
+        display: flex;
+        flex-direction: row;
+        .children{
+            height: 100%;
+            width: calc(100% - 260px);
+        }
+    }
 }

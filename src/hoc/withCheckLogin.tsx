@@ -4,6 +4,7 @@ import { PATHS } from '../constants/paths'
 import { useRecoilState } from 'recoil'
 import { userInfoAtom } from '../store/users'
 import { userMe } from '../api/users'
+import camelcaseKeys from 'camelcase-keys'
 
 const withCheckLogin = <P extends object>(WrappedComponent: React.ComponentType<P>) => {
     const Component = (props: JSX.IntrinsicAttributes & P & { children?: React.ReactNode }) => {
@@ -15,18 +16,16 @@ const withCheckLogin = <P extends object>(WrappedComponent: React.ComponentType<
         useEffect(() => {
             const token = localStorage.getItem("token")
             if(!token){
-                history.push(PATHS.LOGIN)
+                //history.push(PATHS.LOGIN)
             }
             if(!userInfo.username){
                 userMe()
                 .then(res => {
-                    setUserInfo({
-                        username: res.data["name"]
-                    })
+                    setUserInfo(camelcaseKeys(res.data))
                 })
                 .catch(err => {
-                    alert("다시 로그인 해 주세요.")
-                    history.push(PATHS.LOGIN)
+                    //alert("다시 로그인 해 주세요.")
+                    //history.push(PATHS.LOGIN)
                     console.log("err: username does not exist")
                 })
             }

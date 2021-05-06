@@ -1,0 +1,54 @@
+$darkModeBackgroundColor: #212121;
+$darkModeSecondaryColor: #2D2D2D;
+$darkModeThirdColor: #2D2D2D;
+$darkModeFourthColor: #333333;
+$darkModeTextColor: #FFFFFF;
+$darkModeSecondaryTextColor: #CBCBCB;
+$darkModeHeaderBackgroundColor: #1A1A1A;
+
+$lightModeBackgroundColor: #E1E1EB;
+$lightModeSecondaryColor: #FFFFFF;
+$lightModeTextColor: #222222;
+$lightModeSecondaryTextColor: #333333;
+$lightModeThirdTextColor: #555555;
+$lightModeHeaderBackgroundColor: #3377F6;
+
+.darkBackground1{
+    background-color: $darkModeBackgroundColor;
+}
+.darkBackground2{
+    background-color: $darkModeSecondaryColor;
+}
+.darkBackground3{
+    background-color: $darkModeThirdColor;
+}
+.darkBackground4{
+    background-color: $darkModeFourthColor;
+}
+.darkText1{
+    color: $darkModeTextColor;
+}
+.darkText2{
+    color: $darkModeSecondaryTextColor;
+}
+.darkHeaderBackground{
+    background-color: $darkModeHeaderBackgroundColor;
+}
+.lightBackground1{
+    background-color: $lightModeBackgroundColor;
+}
+.lightBackground2{
+    background-color: $lightModeSecondaryColor;
+}
+.lightText1{
+    color: $lightModeTextColor;
+}
+.lightText2{
+    color: $lightModeSecondaryTextColor;
+}
+.lightText3{
+    color: $lightModeThirdTextColor;
+}
+.lightHeaderBackground{
+    background-color: $lightModeHeaderBackgroundColor;
+}
