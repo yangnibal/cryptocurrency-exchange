@@ -1,0 +1,46 @@
+.container{
+    width: 100%;
+    height: 160px;
+    margin-bottom: 30px;
+    background-color: var(--color-bg2);
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    .cardName{
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--color-text);
+        margin-bottom: 15px;
+    }
+    .exchangeWrapper{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        .exchangeRow{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .exchangeName{
+                font-size: 16px;
+                color: var(--color-text);
+                margin-bottom: 2px;
+            }
+            .exchangeCurrency{
+                font-size: 14px;
+                color: var(--color-text-secondary);
+            }
+        }
+        .price{
+            font-size: 14px;
+            color: var(--color-text-secondary);
+        }
+    }   
+    .cryptoName{
+        font-weight: 500;
+        font-size: 16px;
+        position: absolute;
+        bottom: 6px;
+        right: 10px;
+        color: var(--color-text-secondary);
+    }
+}

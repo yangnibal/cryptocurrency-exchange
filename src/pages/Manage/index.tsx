@@ -71,7 +71,7 @@ const cardList = [
     }
 ]
 
-const ExchangeManage: React.FC = () => {
+const Manage: React.FC = () => {
 
     const [ addCardModalOn, setAddCardModalOn ] = useState<boolean>(false)
 
@@ -109,4 +109,4 @@ const ExchangeManage: React.FC = () => {
     )
 }
 
-export default withCheckLogin(ExchangeManage)
+export default withCheckLogin(Manage)

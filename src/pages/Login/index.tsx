@@ -32,7 +32,7 @@ const Login: React.FC = () => {
                 userMe()
                 .then(res => {
                     setUserInfo(camelcaseKeys(res.data))
-                    history.push(PATHS.EXCHANGE)
+                    history.push(PATHS.DASHBOARD)
                 })
                 .catch(err => {
                     alert(err)

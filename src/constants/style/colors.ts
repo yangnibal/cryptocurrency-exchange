@@ -2,7 +2,7 @@ import './colors.module.scss'
 
 const darkModeBackgroundColor = "#212121"
 const darkModeSecondaryColor = "#2D2D2D"
-const darkModeThirdColor = "#2D2D2D"
+const darkModeThirdColor = "#434343"
 const darkModeFourthColor = "#333333"
 const darkModeTextColor = "#FFFFFF"
 const darkModeSecondaryTextColor = "#CBCBCB"
@@ -27,6 +27,10 @@ const darkTheme = [
         value: darkModeSecondaryColor
     },
     {
+        key: '--color-bg3',
+        value: darkModeThirdColor
+    },
+    {
         key: '--color-header-bg',
         value: darkModeHeaderBackgroundColor
     },
@@ -38,6 +42,7 @@ const darkTheme = [
 
 const lightModeBackgroundColor = "#E1E1EB"
 const lightModeSecondaryColor = "#FFFFFF"
+const lightModeThirdColor = "#E2E2E2"
 const lightModeTextColor = "#222222"
 const lightModeSecondaryTextColor = "#333333"
 const lightModeThirdTextColor = "#555555"
@@ -60,6 +65,10 @@ const lightTheme = [
     {
         key: '--color-bg2',
         value: lightModeSecondaryColor
+    },
+    {
+        key: '--color-bg3',
+        value: lightModeThirdColor
     },
     {
         key: '--color-header-bg',

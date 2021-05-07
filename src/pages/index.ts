@@ -1,5 +1,5 @@
-import ExchangeMain from './ExchangeMain'
-import ExchangeManage from './ExchangeManage'
+import Dashboard from './Dashboard'
+import Manage from './Manage'
 import Payment from './Payment'
 import Login from './Login'
 import Register from './Register'
@@ -7,8 +7,8 @@ import NotFound from './NotFound'
 import Settings from './Settings'
 
 export default {
-    ExchangeMain,
-    ExchangeManage,
+    Dashboard,
+    Manage,
     Payment,
     Login,
     Register,

@@ -25,8 +25,8 @@ const Router = () => {
 
     return(
         <>
-            <Route exact path={PATHS.EXCHANGE} component={Routes.ExchangeMain}/>
-            <Route exact path={PATHS.EXCHANGE + PATHS.MANAGE} component={Routes.ExchangeManage}/>
+            <Route exact path={PATHS.DASHBOARD} component={Routes.Dashboard}/>
+            <Route exact path={PATHS.MANAGE} component={Routes.Manage}/>
             <Route exact path={PATHS.PAYMENT} component={Routes.Payment}/>
             <Route exact path={PATHS.LOGIN} component={Routes.Login}/>
             <Route exact path={PATHS.REGISTER} component={Routes.Register}/>

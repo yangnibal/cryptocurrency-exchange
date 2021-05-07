@@ -1,5 +1,5 @@
 export enum PATHS {
-    EXCHANGE = '/exchange',
+    DASHBOARD = '/dashboard',
     MANAGE = '/manage',
     PAYMENT = '/payment',
     LOGIN = '/login',
