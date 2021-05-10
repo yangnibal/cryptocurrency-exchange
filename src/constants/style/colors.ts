@@ -80,6 +80,9 @@ const lightTheme = [
     }
 ]
 
+const chartGreen = "#80A08E"
+const chartRed = "#A77774s"
+
 export {
     darkModeBackgroundColor,
     darkModeSecondaryColor,
@@ -95,5 +98,7 @@ export {
     lightModeThirdTextColor,
     lightModeHeaderBackgroundColor,
     darkTheme,
-    lightTheme
+    lightTheme,
+    chartGreen,
+    chartRed
 }

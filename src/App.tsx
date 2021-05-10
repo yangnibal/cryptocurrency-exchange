@@ -7,9 +7,7 @@ const App = () => {
 	return (
 		<RecoilRoot>
 			<BrowserRouter>
-				<Switch>
-					<Router/>
-				</Switch>
+				<Router/>
 			</BrowserRouter>
 		</RecoilRoot>
 	)

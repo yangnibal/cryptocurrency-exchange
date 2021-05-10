@@ -1,0 +1,39 @@
+.select_container{
+    background-color: var(--color-bg2);
+    border: none;
+}
+.select__control{
+    background-color: var(--color-bg2)!important;
+    border: none!important;
+    box-sizing: border-box;
+    padding: 10px 15px!important;
+    padding-bottom: 6px!important;
+    border-radius: 0!important;
+    border-bottom: 1px solid var(--color-border)!important;
+}
+.select__control--is-focused{
+    box-shadow: none!important;
+}
+.select__indicators{
+
+}
+.select__indicator-separator{
+    display: none
+}
+.select__value-container{
+    padding: 0!important;
+}
+.select__placeholder{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: inherit;
+}
+.select__input{
+
+}
+.select__single-value{
+    color: var(--color-text)!important;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: inherit;
+}

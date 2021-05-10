@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { useRecoilState, useSetRecoilState } from 'recoil'
 import { PATHS } from './constants/paths'
 import { darkTheme, lightTheme } from './constants/style/colors'
@@ -14,6 +14,9 @@ const Router = () => {
         const darkMode = localStorage.getItem("darkMode")
         if(darkMode==="true") setIsDarkMode(true)
         else setIsDarkMode(false)
+
+        document.documentElement.style.setProperty("--color-green", "#80A08E")
+        document.documentElement.style.setProperty("--color-red", "#A77774")
     }, [])
 
     useEffect(() => {
@@ -24,15 +27,15 @@ const Router = () => {
     }, [isDarkMode])
 
     return(
-        <>
+        <Switch>
             <Route exact path={PATHS.DASHBOARD} component={Routes.Dashboard}/>
             <Route exact path={PATHS.MANAGE} component={Routes.Manage}/>
             <Route exact path={PATHS.PAYMENT} component={Routes.Payment}/>
             <Route exact path={PATHS.LOGIN} component={Routes.Login}/>
             <Route exact path={PATHS.REGISTER} component={Routes.Register}/>
             <Route exact path={PATHS.SETTINGS} component={Routes.Settings}/>
-            <Route component={Routes.NotFound}/>
-        </>
+            <Route path="*" component={Routes.NotFound}/>
+        </Switch>
     )
 }
 

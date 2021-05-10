@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../../components/Layout'
 import styles from './style.module.scss'
 import withCheckLogin from '../../hoc/withCheckLogin'
 import SelectedCard from '../../components/SelectedCard'
+import DashboardExchangeSelect from '../../components/DashboardExchangeSelect'
+import DashboardChart from '../../components/DashboardChart'
 
 const Dashboard: React.FC = () => {
+
+    useEffect(() => {
+
+    }, [])
+
     return(
         <Layout>
             <div className={styles.container}>
@@ -16,8 +23,11 @@ const Dashboard: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.chartWrapper}></div>
-                <div className={styles.selectedExchangeWrapper}></div>
+                <div className={styles.chartWrapper}>
+                    <DashboardChart/>
+                    <DashboardChart/>
+                </div>
+                <DashboardExchangeSelect/>
             </div>
         </Layout>
     )
