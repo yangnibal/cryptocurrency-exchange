@@ -1,0 +1,34 @@
+.submenuDefault{
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    &:hover{
+        background-color: var(--color-submenu);
+    }
+}
+.submenuSelected{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-submenu);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.bar{
+    width: 5px;
+    height: 100%;
+    background-color: var(--color-text-secondary);
+}
+.barHidden{
+    width: 5px;
+    height: 100%;
+}
+.submenuContent{
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 70px;
+}

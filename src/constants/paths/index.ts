@@ -4,5 +4,7 @@ export enum PATHS {
     PAYMENT = '/payment',
     LOGIN = '/login',
     REGISTER = '/register',
-    SETTINGS = '/settings'
+    SETTINGS = '/settings',
+    CARDS = '/cards',
+    GROUPS = '/groups'
 }

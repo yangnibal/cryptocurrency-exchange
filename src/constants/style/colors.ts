@@ -8,6 +8,7 @@ const darkModeTextColor = "#FFFFFF"
 const darkModeSecondaryTextColor = "#CBCBCB"
 const darkModeHeaderBackgroundColor = "#1A1A1A"
 const darkModeBorderColor = "#393939"
+const darkModeSubmenuSelectedColor = "#434343"
 
 const darkTheme = [
     {
@@ -37,6 +38,10 @@ const darkTheme = [
     {
         key: '--color-border',
         value: darkModeBorderColor
+    },
+    {
+        key: '--color-submenu',
+        value: darkModeSubmenuSelectedColor
     }
 ]
 
