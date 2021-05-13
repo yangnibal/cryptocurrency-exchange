@@ -4,6 +4,7 @@ const darkModeBackgroundColor = "#212121"
 const darkModeSecondaryColor = "#2D2D2D"
 const darkModeThirdColor = "#434343"
 const darkModeFourthColor = "#333333"
+const darkModeFifthColor = "#555555"
 const darkModeTextColor = "#FFFFFF"
 const darkModeSecondaryTextColor = "#CBCBCB"
 const darkModeHeaderBackgroundColor = "#1A1A1A"
@@ -30,6 +31,14 @@ const darkTheme = [
     {
         key: '--color-bg3',
         value: darkModeThirdColor
+    },
+    {
+        key: '--color-bg4',
+        value: darkModeFourthColor
+    },
+    {
+        key: '--color-bg5',
+        value: darkModeFifthColor
     },
     {
         key: '--color-header-bg',
