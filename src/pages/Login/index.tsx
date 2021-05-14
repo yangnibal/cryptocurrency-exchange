@@ -7,6 +7,9 @@ import styles from './style.module.scss'
 import { useSetRecoilState } from 'recoil'
 import { userInfoAtom } from '../../store/users'
 import camelcaseKeys from 'camelcase-keys'
+import GoogleLogin from 'react-google-login'
+import Logo from '../../assets/logo-dark.svg'
+import Google from '../../assets/google.svg'
 
 const Login: React.FC = () => {
 
@@ -48,37 +51,24 @@ const Login: React.FC = () => {
     return(
         <div className={styles.container}>
             <div className={styles.loginBox}>
-                <div className={styles.logo}>Log In</div>
-                <div className={styles.inputWrapper}>
-                    <input
-                        className={styles.input} 
-                        placeholder="email"
-                        onChange={onChange}
-                        name="email"
-                        value={email}
-                        type="email"
-                    />
-                </div>
-                <div className={styles.inputWrapper}>
-                    <input 
-                        className={styles.input} 
-                        placeholder="pw"
-                        onChange={onChange}
-                        name="password"
-                        value={password}
-                        type="password"
-                    />
-                </div>
-                <div className={styles.button + " " + styles.buttonGoogle}>Sign in with google</div>
-                <div className={styles.button} onClick={onClickLogin}>Submit</div>
-                <div className={styles.dividerWrapper}>
-                    <div className={styles.sideDivider}/>
-                    <div className={styles.or}>OR</div>
-                    <div className={styles.sideDivider}/>
-                </div>
-                <div className={styles.registerWrapper}>
-                    <div className={styles.registerText}>Not a member?</div>
-                    <Link to={PATHS.REGISTER} className={styles.registerTextLink}>Sign Up</Link>
+                <div className={styles.contentsWrapper}>
+                    <div className={styles.logoWrapper}>
+                        <img className={styles.logo} src={Logo}/>
+                    </div>
+                    <div className={styles.loginInputWrapper}>
+                        <input className={styles.loginInput} placeholder="email" type="email"/>
+                    </div>
+                    <div className={styles.loginInputWrapper}>
+                        <input className={styles.loginInput} placeholder="password" type="password"/>
+                    </div>
+                    <div className={styles.submitButton}>Submit</div>
+                    {/*<GoogleLogin
+                        render={(props) => (
+                            <div className={styles.googleButton} onClick={props.onClick}>Sign in with Google</div>
+                        )}
+                    />*/}
+                    <div className={styles.googleButton}><img src={Google} className={styles.googleIcon}/>Sign in with Google</div>
+                    <div className={styles.signUp}>Don't have an account yet? <Link to="/" className={styles.signUpLink}>Sign Up</Link></div>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import { PATHS } from '../../constants/paths'
 import SidebarContent from '../SidebarContent'
 import styles from './style.module.scss'
 import ProfileImg from '../../assets/user-default.png'
+import Logo from '../../assets/logo-dark.svg'
 import SidebarSubmenu from '../SidebarSubmenu'
 
 const Sidebar = () => {
@@ -14,7 +15,9 @@ const Sidebar = () => {
 
     return(
         <div className={styles.sidebar}>
-            <div className={styles.logo}>App name</div>
+            <div className={styles.logoWrapper}>
+                <img src={Logo} className={styles.logo}/>
+            </div>
             <div className={styles.userProfileWrapper}>
                 <div className={styles.userProfileImgWrapper}>
                     <img className={styles.userProfileImg} src={ProfileImg} alt="profileImg"/>

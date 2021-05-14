@@ -28,6 +28,7 @@ const Router = () => {
 
     return(
         <Switch>
+            <Route exact path="/" component={Routes.Login}/>
             <Route exact path={PATHS.DASHBOARD} component={Routes.Dashboard}/>
             <Route exact path={PATHS.MANAGE + PATHS.CARDS} component={Routes.Manage.Cards}/>
             <Route exact path={PATHS.MANAGE + PATHS.GROUPS} component={Routes.Manage.Groups}/>
