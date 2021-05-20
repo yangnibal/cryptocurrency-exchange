@@ -1,7 +1,7 @@
 .select_container{
     background-color: var(--color-bg2);
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .select__control{
     background-color: var(--color-bg2)!important;
@@ -10,8 +10,8 @@
     padding: 10px 15px!important;
     padding-bottom: 6px!important;
     border-radius: 0!important;
-    border-top-left-radius: 10px!important;
-    border-top-right-radius: 10px!important;
+    border-top-left-radius: 5px!important;
+    border-top-right-radius: 5px!important;
     border-bottom: 1px solid var(--color-border)!important;
 }
 .select__control--is-focused{

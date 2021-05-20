@@ -21,7 +21,7 @@ const SidebarContent: React.FC<Props> = ({
             <div className={styles.sidebarContentImgWrapper}>
                 <div className={styles.sidebarContentImg}/>
             </div>
-            <div className={styles.sidebarContent} style={{ fontWeight: location.pathname===`/${content.toLowerCase()}` ? 800 : 400 }}>{content}</div>
+            <div className={styles.sidebarContent} style={{ fontWeight: location.pathname.includes(content.toLowerCase()) ? 800 : 400 }}>{content}</div>
         </div>
     )
 }

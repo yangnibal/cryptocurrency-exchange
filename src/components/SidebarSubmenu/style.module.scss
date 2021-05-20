@@ -5,13 +5,13 @@
     display: flex;
     align-items: center;
     &:hover{
-        background-color: var(--color-submenu);
+        background-color: var(--color-bg3);
     }
 }
 .submenuSelected{
     width: 100%;
     box-sizing: border-box;
-    background-color: var(--color-submenu);
+    background-color: var(--color-bg3);
     height: 40px;
     display: flex;
     align-items: center;

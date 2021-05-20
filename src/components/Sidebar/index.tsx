@@ -25,9 +25,6 @@ const Sidebar = () => {
                 <div className={styles.userProfileName}>Wonjun</div>
             </div>
             <div className={styles.sidebarSection}>
-                <SidebarContent onClick={() => history.push(PATHS.DASHBOARD)} content="Overview" img=""/>
-            </div>
-            <div className={styles.sidebarSection}>
                 <SidebarContent onClick={() => history.push(PATHS.DASHBOARD)} content="Dashboard" img=""/>
                 <SidebarContent onClick={() => history.push(PATHS.MANAGE + PATHS.CARDS)} content="Manage" img=""/>
                 {location.pathname.indexOf(PATHS.MANAGE)!==-1 && (

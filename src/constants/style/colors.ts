@@ -61,7 +61,9 @@ const darkTheme = [
 
 const lightModeBackgroundColor = "#E1E1EB"
 const lightModeSecondaryColor = "#FFFFFF"
-const lightModeThirdColor = "#E2E2E2"
+const lightModeThirdColor = "#C3C3C3"
+const lightModeFourthColor = "#DCDCDC"
+const lightModeFifthColor = "#E6E6E6"
 const lightModeTextColor = "#222222"
 const lightModeSecondaryTextColor = "#333333"
 const lightModeThirdTextColor = "#555555"
@@ -88,6 +90,14 @@ const lightTheme = [
     {
         key: '--color-bg3',
         value: lightModeThirdColor
+    },
+    {
+        key: '--color-bg4',
+        value: lightModeFourthColor
+    },
+    {
+        key: '--color-bg5',
+        value: lightModeFifthColor
     },
     {
         key: '--color-header-bg',
