@@ -5,9 +5,14 @@ import withCheckLogin from '../../hoc/withCheckLogin'
 import SelectedCard from '../../components/SelectedCard'
 import DashboardExchangeSelect from '../../components/DashboardExchangeSelect'
 import DashboardChart from '../../components/DashboardChart'
-import { getBitflyerTickerResponse, getBithumbTicker, getUpbitTicker } from '../../api/tickers'
+import { getBitflyerTickerResponse, getBithumbTicker, getCoinoneTickerResponse, getUpbitTicker } from '../../api/tickers'
 
 const Dashboard: React.FC = () => {
+
+    useEffect(() => {
+        console.log(getCoinoneTickerResponse("", "btc"))
+    }, [])
+
     return(
         <Layout>
             <div className={styles.container}>
